@@ -1,0 +1,19 @@
+plugins {
+  id 'java'    
+  id "com.gradle.build-scan" version "3.11.4"
+}
+
+repositories {
+  mavenCentral()
+}
+
+gradleEnterprise {
+  buildScan {
+    publishAlways()
+  }
+}
+
+dependencies {
+  implementation 'com.google.guava:guava:31.1-jre'
+  testImplementation 'junit:junit:4.13.2'
+}
